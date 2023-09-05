@@ -44,3 +44,30 @@ console.log(typeof myFunction);
 //  If val is a Boolean, return "boolean".
 //  If val is a Number, return "number".
 //  If val is a BigInt, return "bigint".
+
+
+//*************************Memory******************************
+
+//Stack(Primitive) and Heap(Non-primitive) Memory
+
+
+let myName = "Sandhya"
+
+let anotherName = myName
+anotherName = "Shanvi"
+
+console.log(myName);
+console.log(anotherName);
+
+
+let userOne = {
+    email : "user@gmai,l.com",
+    upi : "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "sandhya@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
