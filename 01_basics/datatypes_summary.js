@@ -70,4 +70,5 @@ let userTwo = userOne
 userTwo.email = "sandhya@gmail.com"
 
 console.log(userOne.email);
+
 console.log(userTwo.email);
