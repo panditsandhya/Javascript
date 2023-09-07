@@ -65,13 +65,30 @@ const obj3 = {...obj1, ...obj2} // spread operator
 
 // (users[1].email)
 
-console.log(facebookUser);
-console.log(Object.keys(facebookUser));
-console.log(Object.values(facebookUser));
-console.log(Object.entries(facebookUser));// array inform of key and vlaue
+// console.log(facebookUser);
+// console.log(Object.keys(facebookUser));
+// console.log(Object.values(facebookUser));
+// console.log(Object.entries(facebookUser));// array inform of key and vlaue
 
 // console.log(facebookUser.hasOwnProperty('isLoggedIn')); // this property checked value  exists or not in object
 
 // console.log(facebookUser.hasOwnProperty('isLogged'));
 
 
+//object Destructuring
+
+const course = {
+    courseName: "Javascript",
+    price: 2999,
+    courseInstructor: "Hitesh"
+}
+//course.courseInstructor
+
+const { courseInstructor: instructor } = course
+console.log(instructor);
+
+//Api format
+// {
+//     "name": "sandhya",
+//     "age": 25,
+// }
