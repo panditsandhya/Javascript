@@ -1,4 +1,3 @@
-//singleton
 //Object.create: It is called Constructor method 
 
 
