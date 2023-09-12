@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+<div>
+    <h1 id="title" class="heading">DOM Manipulation <span style="display:none">Hidden text</span></h1>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <!-- <h2 id="heading">DOM Manipulation</h1> -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <input type="password" name="" id=""/>
+    </div>
+    <ul>
+        <li class="list-item">One</li>
+        <li class="list-item">Two</li>
+        <li class="list-item">Three</li>
+        <li class="list-item">Four</li>
+        <li class="list-item">Five</li>
+    </ul>
+
+    
+</body>
+<script type="text/javascript">
+
+// document.getElementById('heading').innerHTML = "<h1>Document Object Model</h1>"
+// document.getElementById('class').getAttribute('class')
+// document.getElementById('title').getAttribute('class')
+// document.getElementById('title').setAttribute('class','test')
+// const title = document.getElementById('title')
+// title.style.backgroundColor = 'red'
+// title.style.color = 'blue'
+// title.style.padding = "15px"
+// title.style.borderRadius = "5px"
+// title // find title
+
+// title.textContent // find visible and non- visible content
+
+// title.innerHTML // find html 
+// title.innerText // find visible content
+
+// document.getElementsByClassName('heading')
+// document.querySelector('h2') // select only one
+// document.querySelectorAll('h2') // select all 
+// document.querySelector('#title') 
+// document.querySelector('.heading')
+
+// document.querySelector('input[type="password"]')
+
+// document.querySelector('ul')
+// const myul = document.querySelector('ul')
+// myul.querySelector('li')
+// const turnRed = myul.querySelector('li')
+// turnRed.style.backgroundColor = 'red'
+// turnRed.style.padding = "15px"
+// turnRed.style.color = "blue"
+// turnRed.innerText
+// turnRed.innerText = "OnePlus"
+// document.querySelectorAll('li')
+// const liList = document.querySelectorAll('li')
+// liList
+// liList.style.color = 'red' // can not do this
+// liList[0].style.color = 'red'
+
+// document.querySelectorAll('h1')
+// const heading = document.querySelectorAll('h1')
+// heading
+// heading.style.color = 'red' // can not access
+// heading[0].style.color = 'red'
+
+// const liList = document.querySelectorAll('li')
+// liList
+
+// NodeList is not a real array that is why we can use forEach loop 
+// liList.forEach(function(l){
+//     l.style.backgroundColor = 'red'
+    
+// })
+
+
+// liList.forEach(function(l){
+//     l.style.color = 'yellow'
+    
+// })
+
+// document.getElementsByClassName('list-item')
+// const tempClassList = document.getElementsByClassName('list-item')
+// tempClassList 
+// tempClassList.forEach(function(li) {
+//     console.log(li)
+    
+    
+// }) // can not access because this is html collection not array
+// Array.from('tempClassList') // first change html collection into array
+
+// convertedArr
+// convertedArr.forEach(function(li) {
+//     li.style.color = 'red'
+    
+// })
+
+//wikipedia
+// document.querySelectorAll('h2')
+// const allH2 = document.querySelectorAll('h2')
+// allH2[1].innerText
+// document.querySelectorAll('.mw-headline')
+// const myH2 = document.querySelectorAll('.mw-headline')
+// myH2[0].innerText
+// myH2.forEach(function(h) {
+//     h.style.color = 'yellow'
+//     h.style.backgroundColor = 'green'
+//     h.style.padding = "10px"
+    
+// })
+
+
+
+
+
+
+
+
+</script>
+</html>
