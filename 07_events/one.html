@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" height="150px"  id="photoshop" src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="photoshop"></li>
+    
+            <li><img width="200px" height="150px" id="flower" src="https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            
+            <li><img width="200px" height="150px"  id="nature" src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=600" alt="nature"></li>
+
+            <li><img width="200px" height="150px" id="owl" src="https://images.pexels.com/photos/66885/owl-yellow-eyes-white-bird-66885.jpeg?auto=compress&cs=tinysrgb" alt="owl"></li>
+    
+            <li><a  style="color:aliceblue" href="https://google.com" id="google">Google</a></li>
+        </ul>
+
+    </div>
+    
+</body>
+<script>
+     // Important topics
+    // type, timestamp, preventDefault
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY // interview prespective
+    // altKey, ctrlKey, shiftkey, keyCode 
+
+   // 1st Method
+    // document.getElementById('owl').onclick = function(){
+    //     alert('Owl clicked')
+    // }
+    
+    //2nd Method : Best approach
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert('owl clicked')
+    // })
+
+    //attachEvent()
+    // jquery - on
+
+    // 3rd Method
+  // Event propagation : Bubbling - go to down to up or inside to outside
+ // false : Bubbling 
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('clicked inside the ul');
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log('owl clicked');
+    // }, false)
+
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('clicked inside the ul');
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log('owl clicked');
+    //     e.stopPropagation() // stop bubbling 
+    // }, false)
+
+    // Event propagation : capturing : outside to inside
+    // true : capturing
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('clicked inside the ul');
+    // }, true)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log('owl clicked');
+    // }, true)
+
+    //     document.getElementById('google').addEventListener('click',function(e){
+    //         e.preventDefault();
+    //         e.stopPropagation(); // stop bubbling
+    //     console.log('google clicked');
+    // }, false)
+
+
+    // remove images
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     //console.log(e.target.parentNode);
+    //     let removeImages = e.target.parentNode
+    //     // removeImages.remove(); // first approach
+       
+    // })
+
+    // removeImages.parentNode.removeChild(removeImages) // second approach
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName == 'IMG'){
+            console.log(e.target.id)
+            let removeImages = e.target.parentNode
+            removeImages.remove();
+        }
+    })
+
+
+
+
+</script>
+</html>
