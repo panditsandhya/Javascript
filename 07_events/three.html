@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Timer</title>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1>Buttons to start and stop a timer in JavaScript</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
 <script>
+
+    let start = document.querySelector('#start')
+    let stop = document.querySelector('#stop')
+
+    let timerId; // global variables
+
+    start.addEventListener('click', function(){
+        timerId = setInterval(function(){
+            console.log("Hello", Date.now());
+        }, 1000);
+
+    });
+
+    stop.addEventListener('click', function(){
+        clearInterval(timerId)
+    });
+
 
     //   const sayDate = function(){
     //     console.log("Hello", Date.now());
@@ -22,20 +39,7 @@
 
     // clearInterval(intervalId)
 
-    const startInterval = function(str){
-        console.log(str, Date.now());
-        
-    }
-    const intervalId = setInterval(startInterval, 1000, "Hello")
-    
-    const stopInterval = function(){
-        clearInterval(intervalId)
 
-    }
-
-    document.querySelector('#start').addEventListener('click', startInterval)
-
-    document.querySelector('#stop').addEventListener('click', stopInterval)
 
 
 </script>
