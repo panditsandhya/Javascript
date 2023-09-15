@@ -1,63 +1,63 @@
 // First Promise
 
-// const promiseOne = new Promise(function(resolve, reject){
-//     // Do any async task
-//     // DB calls, cryptography, network
+const promiseOne = new Promise(function(resolve, reject){
+    // Do any async task
+    // DB calls, cryptography, network
 
-//     setTimeout(function(){
-//         console.log('Async task is complete');
-//         resolve()
-//     }, 1000)
-// })
+    setTimeout(function(){
+        console.log('Async task is complete');
+        resolve()
+    }, 1000)
+})
 
-// promiseOne.then(function(){
-//     console.log("Promise consumed");
-// })
+promiseOne.then(function(){
+    console.log("Promise consumed");
+})
 
-// Second Promise
+//Second Promise
 
-// new Promise(function(resolve,reject){
-//     setTimeout(function(){
-//         console.log("Async task 2");
-//         resolve()
-//     }, 1000)
-// }).then(function(){
-//     console.log("Async 2 resolved");
-// })
+new Promise(function(resolve,reject){
+    setTimeout(function(){
+        console.log("Async task 2");
+        resolve()
+    }, 1000)
+}).then(function(){
+    console.log("Async 2 resolved");
+})
 
 // Third Promise
 
-// const PromiseThree = new Promise(function(resolve, reject){
-//     setTimeout(function(){
-//         resolve({username: "Sandhya", email: "sandhya@example.com"})
-//     }, 1000)
-// })
+const PromiseThree = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        resolve({username: "Sandhya", email: "sandhya@example.com"})
+    }, 1000)
+})
 
-// PromiseThree.then(function(user){
-//     console.log(user);
-// })
+PromiseThree.then(function(user){
+    console.log(user);
+})
 
 // Four Promise
 
-// const promiseFour = new Promise(function(resolve, reject){
-//     setTimeout(function(){
-//         let error = true
-//         if(!error) {
-//             resolve({username: "sandhya", password: "123"})
-//         }else{
-//             reject('ERROR: Something went wrong')
-//         }
-//     }, 1000)
-// })
+const promiseFour = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+        if(!error) {
+            resolve({username: "sandhya", password: "123"})
+        }else{
+            reject('ERROR: Something went wrong')
+        }
+    }, 1000)
+})
 
-// promiseFour.then((user) => {
-//     console.log(user);
-//     return user.username
-// }).then((username) => {
-//     console.log(username);
-// }).catch(function(error){
-//     console.log(error);
-// }).finally(() => console.log("The promise is either resolved or rejected"))
+promiseFour.then((user) => {
+    console.log(user);
+    return user.username
+}).then((username) => {
+    console.log(username);
+}).catch(function(error){
+    console.log(error);
+}).finally(() => console.log("The promise is either resolved or rejected"))
 
 // Promise five
 
@@ -84,4 +84,30 @@ async function consumePromiseFive(){
 }
 
 consumePromiseFive()
+
+async function getAllUsers(){
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos/')
+
+        const data = await response.json()
+        console.log(data);
+        
+    } catch (error) {
+        console.log("E: ", error);
+        
+    }
+}
+
+getAllUsers()
+
+fetch('https://jsonplaceholder.typicode.com/todos/').then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
+
+
+
 
